@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+:root {
+    /* Yellow-White (Light) theme */
+    --background: 45 30% 98%; /* near white with warm tint */
+    --foreground: 30 20% 15%;
+
+    --card: 45 50% 96%;
+    --card-foreground: 30 20% 15%;
+
+    --popover: 45 50% 96%;
+    --popover-foreground: 30 20% 15%;
+
+    --primary: 45 95% 50%; /* Thai gold */
+    --primary-foreground: 30 20% 15%;
+
+    --secondary: 15 25% 85%;
+    --secondary-foreground: 30 20% 15%;
+
+    --muted: 45 20% 90%;
+    --muted-foreground: 30 15% 45%;
+
+    --accent: 25 65% 60%;
+    --accent-foreground: 45 50% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 50% 98%;
+
+    --border: 45 25% 85%;
+    --input: 45 25% 90%;
+    --ring: 45 95% 50%;
+
+    /* Thai-themed colors */
+    --thai-gold: 45 95% 50%;
+    --thai-gold-light: 45 85% 65%;
+    --thai-gold-dark: 45 85% 35%;
+    --thai-red: 0 75% 55%;
+    --thai-green: 120 40% 45%;
+    --thai-cream: 45 40% 92%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--thai-gold)), hsl(var(--thai-gold-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--thai-gold)) 0%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--thai-cream)));
+
+    /* Shadows */
+    --shadow-thai: 0 10px 30px -10px hsl(var(--thai-gold) / 0.3);
+    --shadow-elegant: 0 4px 20px -4px hsl(var(--thai-gold) / 0.15);
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Yellow-Black (Dark) theme */
+  .dark {
+    --background: 48 12% 7%; /* near black with warm-yellow undertone */
+    --foreground: 45 40% 96%;
+
+    --card: 48 12% 10%;
+    --card-foreground: 45 40% 96%;
+
+    --popover: 48 12% 10%;
+    --popover-foreground: 45 40% 96%;
+
+    --primary: 45 95% 50%; /* keep gold as accent in dark */
+    --primary-foreground: 48 12% 10%;
+
+    --secondary: 48 10% 15%;
+    --secondary-foreground: 45 40% 96%;
+
+    --muted: 48 10% 14%;
+    --muted-foreground: 45 15% 70%;
+
+    --accent: 48 10% 20%;
+    --accent-foreground: 45 40% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 45 40% 96%;
+
+    --border: 48 10% 18%;
+    --input: 48 10% 18%;
+    --ring: 45 95% 50%;
+
+    /* Sidebar */
+    --sidebar-background: 48 10% 8%;
+    --sidebar-foreground: 45 40% 96%;
+    --sidebar-primary: 45 95% 50%;
+    --sidebar-primary-foreground: 48 12% 10%;
+    --sidebar-accent: 48 10% 12%;
+    --sidebar-accent-foreground: 45 40% 96%;
+    --sidebar-border: 48 10% 16%;
+    --sidebar-ring: 45 95% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Motion utilities for modern feel */
+@layer utilities {
+  .animate-float-slow { animation: float 6s ease-in-out infinite; }
+  .animate-float-fast { animation: float 3.5s ease-in-out infinite; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
