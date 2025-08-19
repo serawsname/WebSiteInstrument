@@ -152,12 +152,12 @@ const Index = () => {
           
                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
              {[
-               { name: "ระนาดเอก", description: "เครื่องดนตรีตีแบบไทย" },
-               { name: "ขลุ่ยเพียงอ้อ", description: "เครื่องดนตรีเป่าแบบไทย" },
-               { name: "ซออู้", description: "เครื่องดนตรีสีแบบไทย" },
-               { name: "ฆ้องวงใหญ่", description: "เครื่องดนตรีตีประเภทโลหะ" },
-               { name: "แคน", description: "เครื่องดนตรีเป่าประเภทปาก" },
-               { name: "พิณ", description: "เครื่องดนตรีสีแบบไทย" }
+               { name: "ระนาดเอก", description: "เครื่องดนตรีประเภทตี" },
+               { name: "ขลุ่ยเพียงอ้อ", description: "เครื่องดนตรีประเภทตีเป่า" },
+               { name: "ซออู้", description: "เครื่องดนตรีประเภทตีสี" },
+               { name: "ฆ้องวงใหญ่", description: "เครื่องดนตรีตีประเภทตี" },
+               { name: "แคน", description: "เครื่องดนตรีประเภทเป่า" },
+               { name: "พิณ", description: "เครื่องดนตรีประเภทดีด" }
              ].map((instrument, index) => (
               <Card key={index} className="bg-gradient-card border-thai-gold/20 hover:shadow-thai transition-all duration-300 transform hover:scale-105">
                 <CardContent className="p-6 text-center">
