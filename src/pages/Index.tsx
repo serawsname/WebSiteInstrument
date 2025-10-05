@@ -12,7 +12,7 @@ const Index = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1AqBzQx2xxeHujNoKjg5OwZ4pM_WrvWXL/view?usp=drive_link';
+    link.href = 'https://drive.usercontent.google.com/download?id=1AqBzQx2xxeHujNoKjg5OwZ4pM_WrvWXL&export=download&authuser=0';
     link.download = 'Thai_Instrument.apk';
     link.target = '_blank';
     document.body.appendChild(link);
